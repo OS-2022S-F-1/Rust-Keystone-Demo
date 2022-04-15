@@ -11,6 +11,10 @@
 ### sdk
 移植edge call相关代码，梳理host app和enclave app所使用的接口
 
+### sm
+梳理sm层整体框架
+完成主要接口create_enclave函数的移植
+
 ## 2022.4.9
 ### 短期分工
 - 孙宇涛：移植keystone-driver到rust上，并且植入zCore；
