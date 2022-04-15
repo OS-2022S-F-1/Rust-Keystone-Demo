@@ -12,7 +12,7 @@
 移植edge call相关代码，梳理host app和enclave app所使用的接口
 
 ### sm
-梳理sm层整体框架
+梳理sm层整体框架；
 完成主要接口create_enclave函数的移植
 
 ## 2022.4.9
