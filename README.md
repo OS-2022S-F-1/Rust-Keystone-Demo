@@ -4,6 +4,10 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.4.21
+### sm
+完成ed25519加密算法，用于生成私钥，进行签名；
+
 ## 2022.4.15
 ### Driver
 主体代码移植完成，其主要功能是对于enclave的内存管理以及sbi call的传递，修改了一些调用规范以兼容zCore，需要之后开发sdk时再做讨论；
