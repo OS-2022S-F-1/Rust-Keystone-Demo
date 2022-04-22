@@ -9,6 +9,8 @@
 根据加密算法构造模块crypto.rs，完成cpu、page、thread模块，修改之前的create_enclave及其相关函数错误，完成destroy_enclave移植、初步完成run_enclave、exit_enclave等函数；
 ### common
 ed25519通过测试，完成可供sdk使用的模块，准备日后重构项目依赖；
+### sdk
+完成enclave app接口的移植，部分完成host app接口的移植，重新设计host app接口的实现（出于语言特性和整个项目的考虑）
 
 ## 2022.4.21
 ### sm
