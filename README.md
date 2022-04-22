@@ -5,7 +5,10 @@
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
 ## 2022.4.22
-根据加密算法构造模块crypto.rs，完成cpu、page、thread模块，修改之前的create_enclave及其相关函数错误，完成destroy_enclave移植、初步完成run_enclave、exit_enclave等函数。
+### sm
+根据加密算法构造模块crypto.rs，完成cpu、page、thread模块，修改之前的create_enclave及其相关函数错误，完成destroy_enclave移植、初步完成run_enclave、exit_enclave等函数；
+### common
+ed25519通过测试，完成可供sdk使用的模块，准备日后重构项目依赖；
 
 ## 2022.4.21
 ### sm
