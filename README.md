@@ -4,6 +4,11 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.4.29
+### sm
+完成 attest, enclave, ipi, mprv 模块，添加 assert 模块，thread 模块修改，大致完成所有接口，剩余 pmp 模块待修改；开始看 rustsbi 实现，rustsbi-qemu，尝试加上缺少函数与功能（待完成）；
+
+
 ## 2022.4.22
 ### sm
 根据加密算法构造模块crypto.rs，完成cpu、page、thread模块，修改之前的create_enclave及其相关函数错误，完成destroy_enclave移植、初步完成run_enclave、exit_enclave等函数；
