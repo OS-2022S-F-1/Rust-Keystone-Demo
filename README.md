@@ -4,6 +4,10 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.5.6
+### sm
+修复 sm 层 bug，已完成 sm 层功能；与洛佳学长讨论，由于 keystone 的 sm 层大量使用 opensbi 内部实现，与 opensbi 紧密耦合，无法直接换成 rustsbi，决定根据 sm 所用到功能自行实现在 opensbi 模块，目前已实现部分功能，正在进行中。
+
 ## 2022.5.4
 ### sdk
 完成全部 sdk 移植工作，开始进行测试
