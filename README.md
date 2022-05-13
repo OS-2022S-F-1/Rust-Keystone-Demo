@@ -4,6 +4,19 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.5.13
+### sdk
+- 在尝试了musl和gnu编译器，前者对于rust的支持不够好，后者无法支持std的静态链接；
+- 决定使其完整支持no-std环境：解耦了之前的std支持，手写了命令行arg的读取；
+- 修复了若干bug；
+
+### zCore
+- 进一步加强了理解，修复了out of memory的bug；
+
+### Overall
+- 研究发现runtime的编译耦合了c版本的sdk，因此暂时无法完整跑通；
+- 根据现有的开发进度，决定就现有的sm来进行debug，而sm-rust进行同步开发；
+
 ## 2022.5.6
 ### sm
 修复 sm 层 bug，已完成 sm 层功能；与洛佳学长讨论，由于 keystone 的 sm 层大量使用 opensbi 内部实现，与 opensbi 紧密耦合，无法直接换成 rustsbi，决定根据 sm 所用到功能自行实现在 opensbi 模块，目前已实现部分功能，正在进行中。
