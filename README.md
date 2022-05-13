@@ -19,7 +19,7 @@
 - 进一步加强了理解，修复了out of memory的bug；
 
 ### Overall
-- 研究发现runtime的编译耦合了c版本的sdk，因此暂时无法完整跑通；
+- 研究发现runtime的编译耦合了c版本的sdk，sm也有与opensbi耦合的部分，因此接下来需要研究c和rust混合编译的问题；
 - 根据现有的开发进度，决定就现有的sm来进行debug，而sm-rust进行同步开发；
 
 ## 2022.5.6
