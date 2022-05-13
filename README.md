@@ -5,6 +5,11 @@
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
 ## 2022.5.13
+### sm
+- 完整 sm 层的所有代码
+- 添加大部分 sm 层所用到的 opensbi 接口
+- 由于 sm 层所使用到的部分 opensbi 接口与 opensbi 内部实现深度耦合，无法转到rustsbi。 与学长讨论以后决定尝试使用 fw_dynamic 模式交叉编译 sm-rust 与 opensbi。
+
 ### sdk
 - 在尝试了musl和gnu编译器，前者对于rust的支持不够好，后者无法支持std的静态链接；
 - 决定使其完整支持no-std环境：解耦了之前的std支持，手写了命令行arg的读取；
