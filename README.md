@@ -10,8 +10,13 @@
 - device tree在进入zCore时无法识别，原因是sm修改了dtb的位置，然而这个位置也存在bug，则取消这个修改，将qemu传递的参数原封不动传给zCore；
 - bootrom(bootloader)与sm的地址重合，无法简单地解决，于是将bootrom的功能扔进sm中；
 - 重新整理了完整的编译流程，方便从0开始测试整个模块；
-## 2022.5.13
+
 ### sm
+- 经过与学长和助教的讨论后，原本预计使用fw_dynamic模式将opensbi编译成动态库，再透过rust ffi调用opensbi，但是经过几天的研究，发现opensbi在fw_dynamic模式下仍无法编译成动态库
+- 讨论后决定还是迁移到rustsbi上，正在研究rust-qemu实现，并修改原来sm调用opensbi代码
+
+## 2022.5.13
+### 
 - 完整 sm 层的所有代码
 - 添加大部分 sm 层所用到的 opensbi 接口
 - 由于 sm 层所使用到的部分 opensbi 接口与 opensbi 内部实现深度耦合，无法转到rustsbi。 与学长讨论以后决定尝试使用 fw_dynamic 模式交叉编译 sm-rust 与 opensbi。
