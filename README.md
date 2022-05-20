@@ -4,6 +4,12 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.5.20
+### Overall
+将zCore整合到keystone的体系当中，包括：runtime的编译，c版本的sm的编译与运行，解决了诸多bug：
+- device tree在进入zCore时无法识别，原因是sm修改了dtb的位置，然而这个位置也存在bug，则取消这个修改，将qemu传递的参数原封不动传给zCore；
+- bootrom(bootloader)与sm的地址重合，无法简单地解决，于是将bootrom的功能扔进sm中；
+- 重新整理了完整的编译流程，方便从0开始测试整个模块；
 ## 2022.5.13
 ### sm
 - 完整 sm 层的所有代码
