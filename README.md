@@ -4,6 +4,11 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.5.27
+### sm
+- 已实现 sm 所用 opensbi 代码，化简 sm 层，删除多核部分代码
+- 正在处理代码编译与依赖问题，尝试编译运行
+
 ## 2022.5.20
 ### Overall
 将zCore整合到keystone的体系当中，包括：runtime的编译，c版本的sm的编译与运行，解决了诸多bug：
