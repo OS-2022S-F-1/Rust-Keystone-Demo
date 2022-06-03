@@ -8,6 +8,9 @@
 ### Overall
 - 在使用原有sm的基础上完成enclave创建和销毁的测试，可以验证host和sdk的主体部分正确实现
 
+### sm
+- 修复sm层汇编段代码以及enclave平台相关代码
+
 ## 2022.5.27
 ### sm
 - 已实现 sm 所用 opensbi 代码，化简 sm 层，删除多核部分代码
