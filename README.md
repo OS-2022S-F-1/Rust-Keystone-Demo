@@ -4,6 +4,10 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.6.3
+### Overall
+- 在使用原有sm的基础上完成enclave创建和销毁的测试，可以验证host和sdk的主体部分正确实现
+
 ## 2022.5.27
 ### sm
 - 已实现 sm 所用 opensbi 代码，化简 sm 层，删除多核部分代码
