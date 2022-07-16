@@ -4,6 +4,10 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.7.13
+### Driver
+- 重构创建enclave时U态和S态的调用规范，完成S态对于enclave写页表的操作，兼容zCore的GenericPageTable接口；
+
 ## 2022.6.23
 ### Driver
 - 重构runtime和eapp的加载逻辑，将整个功能转移到host s态中执行，包括写页表，elf加载，并以此重构了epm的内存分配逻辑；
