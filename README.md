@@ -8,6 +8,9 @@
 ### Driver
 - 重构创建enclave时U态和S态的调用规范，完成S态对于enclave写页表的操作，兼容zCore的GenericPageTable接口；
 
+### sdk
+- 重构创建的运行逻辑，删除之前对于页表和elf的处理，将这部分转移到S态，增加传入S态的参数（runtime和eapp的指针和大小）；
+
 ## 2022.6.23
 ### Driver
 - 重构runtime和eapp的加载逻辑，将整个功能转移到host s态中执行，包括写页表，elf加载，并以此重构了epm的内存分配逻辑；
