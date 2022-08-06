@@ -4,6 +4,14 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.8.5
+### Overall
+- 成功进入runtime，它可以成功调用sbi_call输出字符，并且正确执行绝大部分代码；
+- runtime将控制权交给enclave app之后出现错误，怀疑是用户栈的内存分配与初始化的错误；
+
+### Driver
+- 修复了写页表的两个重大bug：页表级数和一、二级页表的flag错误；
+
 ## 2022.7.30
 ### Driver
 - 进行完整的调试，相比于之前的进度，可以完整的对内存进行分配，与M态的sm进行成功的调用；
