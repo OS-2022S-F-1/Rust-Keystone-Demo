@@ -4,6 +4,19 @@
 1. 将Keystone核心代码用rust重写，实现在zCore上创建enclave
 2. 增强enclave内runtime的能力，在enclave内运行更完整的内核以支持更高效的系统调用
 
+## 2022.8.6
+### Overall
+- 可以完整的完成enclave的生命周期，包括创建、运行、处理ocall、恢复运行、结束。主体开发基本完成！
+
+### sdk
+- 将无用的代码全部删除；
+- 调整了alloc utm的顺序，防止pmp阻止host访问epm内存段之后仍然试图写页表的行为；
+
+### Driver
+- 增加了对于用户栈的初始化；
+- 修改了mmap规范，取消了对于epm的mmap，只保留utm；
+- 完善了enclave在destroy阶段的处理，将物理页帧正确地返回到kernel；
+
 ## 2022.8.5
 ### Overall
 - 成功进入runtime，它可以成功调用sbi_call输出字符，并且正确执行绝大部分代码；
